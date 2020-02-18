@@ -1,0 +1,5 @@
+problem 1.4: 0/4
+  response: a; correct: b
+  explanation: in C, if p is an address, then *p is the value at that address
+problem 3.tidy: It looks like your file is in some kind of windows file format.
+  I think using a shift operator makes your code a little hard to follow.

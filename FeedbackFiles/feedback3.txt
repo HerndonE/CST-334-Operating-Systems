@@ -1,0 +1,4 @@
+problem 2.4: 0/10
+  response: F; correct: T
+  explanation: See Figure 6.2, which shows a program in user mode calling a trap instruction
+problem 3.tidy: use blank lines consistently

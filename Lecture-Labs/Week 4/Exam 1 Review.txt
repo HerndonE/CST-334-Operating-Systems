@@ -1,0 +1,176 @@
+4 main resources of a computer system
+	1. CPU
+	2. Disk
+	3. Memory (RAM)
+	4. I/0
+
+Main roles of the OS
+	1. Virtualizer: takes complicated resources such
+as hardware and turns them to virtual resources.
+	2. API: provides a system call library for programs
+	3. Resource Manager: ensures fair and safe sharing
+of resources by programs/users
+
+*******4 Main Topics*******
+Process management
+1. Running multiple programs at once.
+
+Memory management
+2. Provide memory space for programs.
+
+Concurrency
+3. Make concurrent programs coordinate.
+
+File management
+4. How to provide a simple file system.
+
+Unix
+	Ken Thomspon/Dennis Ritchie @Bell Labs 1969
+C
+	Ricthie and Brian Kernighan 1973
+
+bash = Bourne Again Shell
+
+$mkdir /home/ brunsglenn /fall19
+Absolute path
+
+$mkdir fall19
+Relative path
+
+Linux commands for 
+files: touch, cat, mv , rm , cp , cat , head,
+tail etc
+
+directories: ls, mkdir, cd, mv, pwd, rmdir
+
+Permissions
+1. r - read 
+2. w - write 
+3. x - execute
+Examples
+-rw-r--r-- : this files allows the owner read/write
+permission, group can read, other people can read
+
+drwxr-xr-x : this directory allows the owner read/write/exec
+permission, groups to read/write, and others to read/execute
+
+
+Octal Mode/Symbolic Mode for setting permissions
+
+CPU - Central Proccessing Unity
+	Executes instruction in main memory
+	Fetch
+	Decode
+
+Memory Layout for a Running Program
+1. Text Segment 
+	Stores Programs Code
+2. Data Segment
+	Stores Static Variables
+3. Heap Segment
+	Stores Dynamically allocated variables
+4. Stack Segment
+	Stores program call stack
+
+CLI - Command Line Interpreter
+	Display a prompt
+	Accept user input
+	"Parse" input to get command/parameters
+	run the program
+	repeat
+
+Bash builtins: cd, pwd , echo, help
+
+Three standard file descriptors:
+0
+standard input (stdin)
+1
+standard output (stdout)
+2
+standard error (stderr)
+
+A process: running/executing program
+
+Data Structure for Process Management
+1. Process id
+2. Process state
+3. Process register values
+4. Size of process memory
+
+Mechanism: Used by the OS to stop/start processes.
+Policy: used to decide how to schedule processes.
+
+Fork() makes a copy of the current process.
+Wait() waits for a child process to terminate.
+Exec() code of current process is replaced.
+
+turnaround time = amount of time between job arriving 
+and job finishing
+
+Shortest Job First (SJF) policy: minimizes average 
+turnaround time (if jobs arrive at the same time)
+
+First-come, first served (FCFS) policy: Process jobs in
+the order they arrive, regardless of time they need.
+
+Shortest time to completion first (STCF): Whenever a job
+arrives, run the job that would finish first.
+
+response time = amount of time before job arriving
+and system first responding to the job
+
+Round Robin slices every job equally
+
+Waiting time = turnaround time - job length
+
+How to start/stop programs
+Idea 1
+ switch between programs
+Idea 2
+ programs yeild to OS
+Idea 3
+ Set programs in user/kernel mode
+Idea 4 
+ Stop programs using hardware
+
+Traps - software interrupts
+Interrupt table - initialized when the OS boots
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

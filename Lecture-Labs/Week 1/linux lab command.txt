@@ -1,0 +1,14 @@
+[hern3998@mlc104 brunsglenn]$ nano
+			copy and paste code
+			ctr ^O
+			ctr ^X
+[hern3998@mlc104 brunsglenn]$ cat hello.c
+[hern3998@mlc104 brunsglenn]$ cd home/CLASSES/brunsglenn
+[hern3998@mlc104 brunsglenn]$ cat bash-cheat-sheet.txt
+[hern3998@mlc104 brunsglenn]$ more bash-cheat-sheet.txt
+[hern3998@mlc104 /]$ cd ~
+[hern3998@mlc104 ~]$ ls
+foo.txt  hello.c  public_html  README.TXT
+[hern3998@mlc104 ~]$ gcc -o hello hello.c
+[hern3998@mlc104 ~]$ ./hello
+hello, world!

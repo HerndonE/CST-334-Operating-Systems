@@ -1,0 +1,11 @@
+problem 1.3: 0/10
+  response: a; correct: b
+  explanation: For a program to run, but its code and its data must be in memory.
+problem 1.4: 0/10
+  response: a; correct: b
+  explanation: The bash shell is GNU project software that is distributed with the Linux kernel.
+problem 1.5: 0/10
+  response: a; correct: c
+  explanation: The context data structures stores the register values that must be restored when a process moves to the Ready state.
+problem 2.5: 0/2
+  response: cp foo.txt /archive; correct: cp foo.txt archive

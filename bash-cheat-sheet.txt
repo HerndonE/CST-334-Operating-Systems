@@ -1,0 +1,152 @@
+#!/bin/bash
+#####################################################
+# Bash cheat sheet
+#
+# derived from a Mac bash sheet sheet by J. Le Coupanec,
+# https://gist.githubusercontent.com/LeCoupa/122b12050f5fb267e75f/raw/0d5d68312792b0c2d531e637384f1781d89cd611/bash-cheatsheet.sh
+# 
+#####################################################
+
+
+# 0. Command-line editing
+
+CTRL+A  # move to beginning of line
+CTRL+B  # moves backward one character
+CTRL+C  # halts the current command
+CTRL+D  # deletes one character backward or logs out of current session, similar to exit
+CTRL+E  # moves to end of line
+CTRL+F  # moves forward one character
+CTRL+G  # aborts the current editing command and ring the terminal bell
+CTRL+K  # deletes (kill) forward to end of line
+CTRL+L  # clears screen and redisplay the line
+CTRL+N  # next line in command history
+CTRL+O  # same as RETURN, then displays next line in history file
+CTRL+P  # previous line in command history
+CTRL+R  # searches backward
+CTRL+S  # searches forward
+CTRL+T  # transposes two characters
+CTRL+U  # kills backward from point to the beginning of line
+CTRL+V  # makes the next character typed verbatim
+CTRL+W  # kills the word behind the cursor
+CTRL+X  # lists the possible filename completefions of the current word
+CTRL+Y  # retrieves (yank) last item killed
+CTRL+Z  # stops the current command, resume with fg in the foreground or bg in the background
+
+DELETE  # deletes one character backward
+!!      # repeats the last command
+exit    # logs out of current session
+
+
+# 1. Bash Basics.
+
+printenv            # displays all environment variables
+echo $SHELL         # displays the shell you're using
+echo $BASH_VERSION  # displays bash version
+bash                # if you want to use bash (type exit to go back to your normal shell)
+which bash          # finds out where bash is on your system
+clear               # clears content on window (hide displayed lines)
+.		    # current directory
+..		    # directory above current directory
+~		    # home directory
+
+
+# 2. File Commands.
+
+ls                            # lists your files
+ls -l                         # lists your files in 'long format', which contains the exact size of the file, who owns the file and who has the right to look at it, and when it was last modified
+ls -a                         # lists all files, including hidden files
+touch <filename>              # creates or updates your file
+cat > <filename>              # places standard input into file
+more <filename>               # shows the first part of a file (move with space and type q to quit)
+head <filename>               # outputs the first 10 lines of file
+tail <filename>               # outputs the last 10 lines of file (useful with -f option)
+mv <filename1> <filename2>    # moves a file
+cp <filename1> <filename2>    # copies a file
+rm <filename>                 # removes a file
+rm -f <filename>	      # removes a file; does not complain if file does not exist
+rm -r <filename>	      # removes a file and all files underneath it, recursively
+diff <filename1> <filename2>  # compares files, and shows where they differ
+wc <filename>                 # tells you how many lines, words and characters there are in a file
+wc -l <filename>              # tells you how many lines there are in a file
+chmod -options <filename>     # lets you change the read, write, and execute permissions on your files
+gzip <filename>               # compresses files
+gunzip <filename>             # uncompresses files compressed by gzip
+grep <pattern> <filenames>    # looks for the string in the files
+grep -r <pattern> <dir>       # search recursively for pattern in directory
+
+
+# 3. Directory Commands.
+
+pwd              		# prints current working directory
+mkdir <dirname>  		# makes a new directory
+cd               		# changes to home directory
+cd <dirname>     		# changes to specified directory
+cp -r <dirname1> <dirname2>     # copies a directory
+mv <dirname1> <dirname2>        # moves a directory
+rm -r <dirname>			# recursively deletes a directory
+
+
+# 4. System Info & Network Commands.
+
+whoami                   # returns your username
+passwd                   # lets you change your password
+date                     # shows the current date and time
+w                        # displays whois online
+man <command>            # shows the manual for specified command
+df                       # shows disk usage
+du <filename>            # shows the disk usage of the files and directories in filename (du -s give only a total)
+bg                       # lists stopped or background jobs ; resume a stopped job in the background
+fg                       # brings the most recent job in the foreground
+fg <job>                 # brings job to the foreground
+which <command>		 # shows location of command in file system 
+
+
+# 5. Input/Output Redirectors.
+
+cmd1 | cmd2  	# pipe; takes standard output of cmd1 as standard input to cmd2
+> file     	# directs standard output to file
+< file     	# takes standard input from file
+>> file    	# directs standard output to file; append to file if it already exists
+n>file     	# directs file descriptor n to file
+n>> file   	# directs file description n to file; append to file if it already exists
+
+
+# 6. Regular Expressions.
+
+abc		# plain text gives an exact match
+^		# beginning of line anchor
+$       	# end of line anchor
+<exp1><exp2>	# match regular expression 1 followed by regular expression 2
+<exp>*		# matches zero or more repetitions of the regular expression
+<exp>+		# matches one or more repetitions of the regular expression
+<exp>?		# matches zero or one repetitions of the regular expression
+.		# match any single character
+[abc]		# matches any single character within brackets
+[^abc]		# matches any single character except those in brackets
+[a-z]		# matches any single character in the given range
+[[:alpha:]]	# matches an upper or lower case alphabetic character
+[[:alnum:]]	# matches an alphanumeric character; same as [0-9a-zA-Z]
+[[:blank:]]	# matches a space or tab character
+
+examples:
+^List		# matches the string "List" at the beginning of a line
+[0-9]$          # matches a digit at the end of a line
+[0-9][a-z]	# matches a digit followed by a lower-case letter
+[^ab][c]	# matches a character that is not 'a' or 'b', followed by character 'c'
+
+
+# 7. Process Handling.
+
+# To suspend a job, type CTRL+Z while it is running. You can also suspend a job with CTRL+Y.
+# This is slightly different from CTRL+Z in that the process is only stopped when it attempts to read input from terminal.
+# Of course, to interupt a job, type CTRL+C.
+
+myCommand &  		# runs job in the background and prompts back the shell
+fg           		# brings a background job into the foreground
+jobs         		# lists all jobs (use with -l to see associated PID)
+ps           		# prints information about current running login shell and processes running under it
+ps -e        		# print information about all processes on the system
+ps -ef			# full format listing of all processes on the system
+top                     # real-time display of processes on system with heaviest use
+kill <PID>              # kills (ends) the processes with the given ID
+
