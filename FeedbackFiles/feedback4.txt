@@ -1,0 +1,16 @@
+problem 1.5: 0/10
+  response: 20; correct: 33
+  explanation: Turnaround times for the three jobs are 10, 30, and 60.
+problem 2.1: 0/10
+  response: c; correct: d
+  explanation: The examples in chapter 8 make it clear that the three assumptions don't hold.
+problem 3.2: 0/10
+  response: N; correct: Y
+  explanation: we have never done an ls on week2-txt/a
+problem 3.5: 0/10
+  response: some stuff; correct: stuff
+  explanation: this file is a copy of a/a/a/bar.txt
+problem 3.10: 0/10
+  response: N; correct: Y
+  explanation: a/a/a/bar.txt was made by the next-to-last cp command
+problem 4.tidy: Inconsistent use of blank lines, and inconsistent use of capitalization in comments
