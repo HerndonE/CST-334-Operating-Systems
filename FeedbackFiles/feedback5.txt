@@ -1,0 +1,10 @@
+problem 1.1: 0/10
+  response: c; correct: a
+  explanation: Each process has its own address space.  Since space is shared by multiple processes, it must be physical.
+problem 1.2: 0/10
+  response: a; correct: b
+  explanation: Section 13.3 says that it is describing an abstraction of memory.
+problem 1.5: 0/10
+  response: T; correct: F
+  explanation: Processes can share virtual addresses, but they will be mapped to different physical addresses.
+problem 7.tidy: Please remove commented-out code before submission.

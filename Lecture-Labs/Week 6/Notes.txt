@@ -1,0 +1,34 @@
+Virtual					|Physical
+Every process				|
+has own V address			|
+
+Base and bounds				|
+Segmentation				|
+Paging					|Physical memory location is base
+
+Bound is the whole			|
+size of the virtual			|
+memory space				|
+
+
+pro base and bounds			|
+	Protection			|
+	Super fast
+
+cons
+	wasted space will be mapped 	|
+	used on physical memory		|
+
+paging is splitting its v memory	|
+to the physical memory.			|
+
+Segmentation is virtual memory that is 	|
+broken up. Like a different array lists |
+for its process.			|
+
+
+Physical address = x(virtual space) +
+				 base
+
+
+ip addresses fitting into a subnet?

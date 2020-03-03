@@ -1,0 +1,31 @@
+stack memory, and allocations and deallocations
+of it are managed implicitly by the compiler for you, the programmer
+
+heap memory, where all allocations and deallocations
+are explicitly handled by you, the programmer.
+
+malloc(): you pass it a size asking for some room on the heap, 
+and it either succeeds and gives you back a pointer to
+the newly-allocated space, or fails and returns NULL^2
+
+free(): To free heap memory that is no longer in use
+
+buffer overflow: A related error is not allocating enough memory.
+
+memory leak: occurs when you forget to free memory.
+
+Efficiency and control together are two of the main goals of 
+any modern operating system
+
+address translation: the hardware transforms each
+memory access (e.g., an instruction fetch, load, or store), changing the virtual
+address provided by the instruction to a physical address where the
+desired information is actually located.
+
+segmentation fault: arises from a memory access
+on a segmented machine to an illegal address.
+
+external fragmentation: physical memory quickly becomes
+full of little holes of free space, making it difficult to allocate new
+segments, or to grow existing ones.
+
