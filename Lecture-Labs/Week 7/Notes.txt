@@ -1,0 +1,39 @@
+page table: to record where each virtual page of the address space is placed in
+physical memory, the operating system usually keeps a per-process data
+structure
+	Role:
+	to store address translations for each of the virtual pages 
+of the address space.
+
+TLB is part of the chip’s memory-management unit (MMU), and is simply a
+hardware cache of popular virtual-to-physical address translations; thus,
+a better name would be an address-translation cache.
+
+1 VPN = (VirtualAddress & VPN_MASK) >> SHIFT
+2 (Success, TlbEntry) = TLB_Lookup(VPN)
+3 if (Success == True) // TLB Hit
+4 if (CanAccess(TlbEntry.ProtectBits) == True)
+5 Offset = VirtualAddress & OFFSET_MASK
+6 PhysAddr = (TlbEntry.PFN << SHIFT) | Offset
+7 Register = AccessMemory(PhysAddr)
+8 else
+9 RaiseException(PROTECTION_FAULT)
+10 else // TLB Miss
+11 PTEAddr = PTBR + (VPN * sizeof(PTE))
+12 PTE = AccessMemory(PTEAddr)
+13 if (PTE.Valid == False)
+14 RaiseException(SEGMENTATION_FAULT)
+15 else if (CanAccess(PTE.ProtectBits) == False)
+16 RaiseException(PROTECTION_FAULT)
+17 else
+18 TLB_Insert(VPN, PTE.PFN, PTE.ProtectBits)
+19 RetryInstruction()
+
+The algorithm the hardware follows works like this: first, extract the
+virtual page number (VPN) from the virtual address (Line 1 in Figure 19.1),
+and check if the TLB holds the translation for this VPN (Line 2). If it does,
+we have a TLB hit, which means the TLB holds the translation. Success!
+We can now extract the page frame number (PFN) from the relevant TLB
+entry, concatenate that onto the offset from the original virtual address,
+and form the desired physical address (PA), and access memory (Lines
+5–7), assuming protection checks do not fail (Line 4).

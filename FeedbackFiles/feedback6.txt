@@ -1,0 +1,3 @@
+problem 3.2: 0/10
+  response: T; correct: F
+  explanation: As explained in the text, sometimes we want processes to share code segments.  See section 16.4.
