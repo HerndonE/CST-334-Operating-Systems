@@ -1,0 +1,24 @@
+problem 1.4: 0/10
+  response: (1000, 1) -> (1003, 1) -> (1004, 5) -> (1019, 81); correct: (1000, 3) -> (1003, 1) -> (1004, 5) -> (1019, 81)
+  explanation: the smallest free list item at least as large as 10 bytes is (1009, 91)
+problem 1.5: 0/10
+  response: (1000, 1) -> (1003, 1) -> (1004, 5) -> (1027, 73); correct:  (1000, 3) -> (1003, 1) -> (1004, 5) -> (1027, 73)
+  explanation: the smallest free list item at least as large as 8 bytes is (1019, 81)
+problem 1.8: 0/10
+  response: (1000,2) -> (1002,26) -> (1082,18); correct:  (1000,28) -> (1082,18)
+  explanation: ptr1 points to 26 bytes at address 1002; coelescing occurs after the free operation
+problem 1.9: 0/10
+  response: (1000,2) -> (1015,13) -> (1082,18); correct: (1013,15) -> (1082,18)
+  explanation: the largest free list item is (1000,28)
+problem 1.10: 0/10
+  response: (1000,2) -> (1015,13) -> (1095,5); correct: (1013,15) -> (1095,5)
+  explanation: the largest free list item is (1082,18)
+problem 3.4: 0/10
+  response: Y; correct: N
+  explanation: The translation lookaside buffer is a hardware cache; there is only one of them.
+problem 4.3: 0/10
+  response: 64; correct: 16384
+  explanation: 2^16 bytes in page table / 4 = 2^14
+problem 4.5: 0/10
+  response: 0.004; correct: 0.254
+  explanation: (2^14 bytes for page table chunks + 256 bytes for page directory)/2^16 bytes in full page table
