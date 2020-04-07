@@ -1,0 +1,16 @@
+A node consists of a value and a pointer to the next node
+
+A list consists of a lock and a pointer to the first node
+
+Scaling list performance
+ The insert and lookup operations use "coarse-grained" locking.
+
+Each thread wants to access gets a lock on the entire list
+
+temp-API thread: every so often, poll the temp variable to see if 
+it has changed
+
+A condition variable is a synchronization variable that lets a thread
+efficiently wait for a change to shared state.
+
+

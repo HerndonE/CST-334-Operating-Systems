@@ -17,3 +17,8 @@ Paging Calculations [Link](https://www.cram.com/flashcards/memorize/334-paging-c
 Bash [Link](https://www.cram.com/flashcards/memorize/bash-practice-6518378)    
 Awk [Link](https://www.cram.com/flashcards/memorize/awk-334-6529711)    
 Find [Link](https://www.cram.com/flashcards/memorize/334-find-10292234)    
+
+# Test your scripts
+```console    
+foo@bar:~$ for test in test*.sh; do echo $test; ./$test; echo $?; done
+```

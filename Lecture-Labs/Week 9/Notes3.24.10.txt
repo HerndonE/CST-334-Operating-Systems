@@ -1,0 +1,62 @@
+Benefits of concurrent programming
+	an IDE can handle editing with one thread and background
+compliation with another
+
+Threads can share memory!
+
+Threads and processes both have state
+
+Threads are faster to create, destroy, and context switch
+
+Create a new thread use pthread_create()
+
+thread: pointer to a pthread_t structure
+attr: thread attributes(or NULL, for defaults)
+start_routine: function to start running
+arg: arguments for start_routine (Null if no args)
+
+pthread_join(): sleep until the given thread dies (a blocking cell)
+
+Critical section: a piece of code that access a shared resource,
+such as a shared variable.
+
+Mutul exclusion: when at most one thread at a time can be in
+a critical section
+
+Race condition: exists if the output of a multithreaded program
+depends on the scheduling or relative of the threads.
+
+Locks are used to prevent more than one thread from exectuing a section
+of code
+	Two States: busy or free.
+	Intially lock is free.
+	use operation "lock" to get the lock.
+	use operation "unlock" to release the lock.
+	Only one thread at a time can hold a particular lock.
+
+lock() is a blocking opertaion
+
+lock implementations
+Correctness - provide mutual exclusion
+Fairness - if a thread requests the lock, it
+will eventually get it
+Performance - overhead of locking should
+be minimized
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
