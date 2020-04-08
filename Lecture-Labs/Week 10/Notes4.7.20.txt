@@ -1,0 +1,36 @@
+
+
+A condition variable is a synchronization object
+that lets threads wait efficiently
+
+Never us semaphores with Anderson and Dahlin
+
+Concurrent code is packaged as shared objects
+
+Method, part 1: class design
+Identify classes
+Define interfaces, and identify state variables
+Implement methods
+
+Method, part 2: multi-threades case
+add a single lock
+add code to acquire and release the lock
+add zero or more condition vairables
+add wait calls within loops
+add signal and broadcast calls
+
+One wait list for condition variables, seperate waiting
+lists
+
+Always signal when the lock is held
+
+1. Surround code that accesses shared data with
+lock/unlock
+
+2. After modifying shared data, signal if other
+threads might want to know about it.
+
+3. The teacher talks to fast
+
+
+
