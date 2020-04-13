@@ -2,6 +2,7 @@
 
 # Textbook    
 Operating Systems: Three Easy Pieces [Link](http://pages.cs.wisc.edu/~remzi/OSTEP/)    
+The Little Book of Semaphores [Link](https://greenteapress.com/wp/semaphores/)    
 
 # Software    
 Download [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)  
