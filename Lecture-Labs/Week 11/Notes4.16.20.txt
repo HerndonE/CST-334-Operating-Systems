@@ -1,0 +1,43 @@
+BNF is a language for defining syntax
+
+A ::= foo | bar
+
+Derive foo: 
+	A -> foo
+
+-------------------------------
+A :: = [B]
+
+B :: = a | b | c
+
+Derive [a]:
+	A -> [B] -> [a]
+
+Derive [c]:
+	A -> [B] -> [c]
+
+-------------------------------
+
+expr ::= expr + expr | 1 | x
+
+Derive "1 + x" 
+	expr -> expr + expr
+		-> 1 + expr
+			-> 1 + x
+	
+
+Derive "1 + 1" 
+	expr -> expr + expr
+		-> 1 + expr
+			-> 1 + 1
+
+Derive "x + 1 + x" 
+	expr -> expr + expr
+		-> expr + expr + expr
+			-> x + expr + expr
+				-> x + 1 + expr
+					-> x + 1 + x
+
+What is the language of BNF Grammar?
+	All strings you can derive from the grammar
+

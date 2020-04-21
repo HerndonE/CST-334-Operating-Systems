@@ -1,0 +1,134 @@
+Environment variables aka global variables
+	inherited by child processes
+	usually written in uppercase
+	Important ones: PATH, HOME, TERM, PS1
+	often setup at login
+
+Shell variables aka loca variables
+	Not inherited by child processes
+
+An alias provides a shortcut for a command
+
+pattern is not a regular expression - its globbing
+
+du - estimate space usage
+
+
+////////////Concurrency review////////////
+
+Mostly on Concurrency
+
+50 minutes
+Concurrency concepts 60%
+Synchronization primitives
+	locks
+	conditions
+	semaphores
+Pthreads programming
+
+Command-line (bash,awk,etc) 20%
+Process mgmt and memory mgmt 20%
+
+A process contains by default can have one thread 
+but may have more threads
+
+Threads and processes both have state
+
+Threads are faster to create, destroy, and context switch
+
+Two processes may share memory if they each have multiple threads
+	false
+
+A lock can be in one of two states: busy or free.
+A lock is initially in the free state.
+Operation lock waits until the lock is free, and automatically make the
+lock busy.
+Operation unlock makes the lock free.
+
+
+A lock is an object that can be "held" by only one thread at a time.
+A lock can be acquired by a thread.
+
+
+Pthreads locks
+	declare lock
+	acquire lock
+	release lock
+	initialize lock
+
+
+All the threads of a process run the same code
+	false
+
+The function 'pthread_create' creates a clone of the currenly
+running thread (like 'fork' of the process API)
+	false
+
+A condition variable is a sychronization object that lets threads
+wait efficiently
+
+When a lock is initialized, it is a free state?
+	true
+
+Condition variables can be implemented with locks?
+	false
+
+Which condition variable operations are blocking?
+	wait 
+
+Classic concurrency problems
+	Bounded buffer
+	Readers/writers lock 
+	Synchronization barrier
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
