@@ -1,0 +1,68 @@
+Lexical analysis
+
+NUM: [0-9][0-9]* //one or more digits
+ID: [a-zA-Z][a-zA-Z0-9]* // an identifier
+
+1. Break the input into "tokens"
+	
+	x    +     22
+	|    |      |
+	v    v      v
+	ID   +     NUM
+
+ID + NUM or ID+NUM
+	expr ->
+		expr + expr ->
+			ID + expr ->
+				ID + NUM
+
+API for a lexical analyzer
+	Lexer:
+	//return ID, NUM, a single character, or NONE 
+	int lexan()
+	
+	//return value of last NUM token
+	int num_val():
+	
+	//return value of last ID Token
+	char *id_val():
+
+Recursive-descent parsing: "top down method of syntax
+analysis in which we excute a set of recursive procedures
+to process the input"
+
+Rewrite to eliminate left recursion
+expr ::= expr + expr
+	| var
+
+expr :: = var
+expr1 :: = + expr expr1 | ""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

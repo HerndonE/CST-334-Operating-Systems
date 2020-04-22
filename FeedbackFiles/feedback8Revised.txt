@@ -1,0 +1,13 @@
+problem 3.negative value for non-cached elements: 0/10
+  test failed: test script test1.sh; return code = -126
+problem 3.lookup caches elements: 0/10
+  test failed: test script test2.sh; return code = -126
+problem 3.clearing removes element from cache: 0/10
+  test failed: test script test3.sh; return code = -126
+problem 3.replacement policy is LRU: 0/10
+  test failed: test script test4.sh; return code = -126
+problem 3.correct cache hit ratio: 0/10
+  test failed: test script test5.sh; return code = -126
+
+35 points added (of 50 possible) for lru_cache.c file that had 
+incorrectly formatted comments at the top.

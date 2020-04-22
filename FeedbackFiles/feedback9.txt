@@ -1,0 +1,30 @@
+problem 1.1: 0/10
+  response: F; correct: T
+  explanation: A single process can many threads.
+problem 3.2: 0/10
+  response: 8; correct: 13
+  explanation: A precise counter would have value 13, which is the value of global counter (5) plus the sum of the local counters (1+3+4).
+problem 3.4: 0/10
+  response: ; correct: c
+  explanation: If multiple threads work on a shared data structure that is not protected by a lock, the problem is that one thread might read or write the data structure while another thread is in the middle of performing an operation on the data structure.
+problem 4.2: 0/4
+  response: b; correct: a
+  explanation: The mutex must be in the locked state, just as it was when wait() was called, because the code after the wait() call will want to access shared variables.
+problem 4.4: 0/4
+  response: b; correct: a
+  explanation: See the tip just before section 30.3 of the text.
+problem 4.5: 0/4
+  response: 9; correct: one of {'8', '20'}
+  explanation: Lines 8 and 20 show the use of a while loop around wait() calls, just as mandated by the Anderson/Dahlin method.
+problem 5.count substrings length 4; words length 7: 0/5
+  test failed: test script test5.sh; return code = -1
+problem 6.3 values each thread: 0/5
+  test failed: code timed out
+problem 6.6 values each thread: 0/5
+  test failed: code timed out
+problem 6.threads have 1 and 6 values: 0/5
+  test failed: code timed out
+problem 6.threads have 0 and 6 values: 0/5
+  test failed: code timed out
+problem 6.large number of inputs: 0/5
+  test failed: code timed out
