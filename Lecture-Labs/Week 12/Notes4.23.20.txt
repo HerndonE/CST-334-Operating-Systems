@@ -1,0 +1,79 @@
+
++ terminal
+expr non terminal
+
+Parse trees
+
+1. root is labeled with start symbol
+2. the symbols in one of its productions become child nodes
+3. continue until all leaf nodes are terminal symbols
+
+Ambiguous grammar
+	expr = num | expr + expr | expr * expr
+	Creater a parse tree for "1+3*4"
+
+A grammar is ambiguous is, for some string that can
+be derived from the grammar, there is more than one
+parse tree.
+
+Different parse trees usually suggest different meanings
+
+Left factoring
+Any problems with a predictive parser here? 
+A ::= a B | a C |b D
+ Yes
+
+Suppose an expression can be a varible or function call.
+tot (a variable)
+max(y)  (a function call)
+
+expr ::= var (expr)	//a function call
+        | var 		// a variable
+
+excercise" apply left factoring
+
+a solution
+	expr ::= var expr1
+	expr1 ::= (expr) | ""
+
+cant associate non terminal and terminal syntax together
+
+In an abstract syntax tree, nodes are operators and children
+of a node are the operands.
+
+
+A function stmt() returns a Stmt Object.
+The function expr() returns an Expr object.
+
+Compiling: our language processor will generate code.
+
+Add an 'emit()' method to each custom class that will
+generate code for that class.
+
+Interpreting: our language processor will evaluate the 
+input text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

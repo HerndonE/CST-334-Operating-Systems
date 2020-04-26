@@ -1,0 +1,4 @@
+problem 1.5: 0/10
+  response: b; correct: c
+  explanation: Semaphores have the power of both locks and condition variables combined.
+problem 2.number of readers: test failed: test script test4.sh; return code = -1
