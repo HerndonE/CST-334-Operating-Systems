@@ -1,0 +1,70 @@
+
+expr :: = NUM | expr + expr | expr -expr | (expr)
+
+^^ not suitable because of left recursion
+
+expr ::= NUM | expr expr1 | (expr)
+expr1 ::= +expr | -expr
+
+transformed
+	expr ::= NUM expr1 | (expr) expr1
+	expr1 ::= +expr | -expr | ""
+
+
+How does the OS actually talk to devices
+	What CPU operations are involved?
+	How are devices addressed?
+
+Block devices
+	ex: Hard Drive
+	Random access of fixed-size "blocks" of data
+	each block has an address
+	block size typically 512 bytes of 32KB
+	Transfers are in units of entire blocks
+
+Character devices
+	examples: printers, mouses, keyboards
+	processes a stream of bytes, one after another
+	character devices are not addressable
+
+How CPU interacts with device
+while (status == busy)
+	;
+write data to data register
+write command to command register
+write (status == busy)
+	;
+
+This is called "programmed I/O" - the CPU is running code to talk
+to the device
+
+To avoid pooling, I/O can be interrupt-driven:
+	OS issues an I/O request
+	OS puts calling process to sleep
+	....
+
+Direct Memory Access uses a special hardware device that 
+transfers data between devices and memory without cpu help
+
+How does OS talk to devices
+	Approach 1:
+		CPU has special instructions, such as 'in','out'
+		The arguments specify a CPU register, and a "port" that names a device
+
+	Approach 2:
+		Device registers are mapped to memory addresses ("memory-mapped I/O")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

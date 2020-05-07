@@ -1,0 +1,82 @@
+Possible fixes for HW 11 awk 
+	
+Dr. Bruns in the Zoom meeting assumed
+that the folks that pass the tests provide and not
+his personal tests that just put code together willy nilly
+and doesn't care about the problem at hand
+"as a software engineer..." Not everyone is a software engineer
+
+
+Hard Drive attributes
+	Actuator
+	Actuator arms
+	Head 
+	Platter
+
+In early disk interfaces, "CHS addressing":
+	Cylinder
+	Head
+	Sector
+
+Reading/Writing of a drive involves 3 steps:
+1. Wait for the sector to rotate underneath head (rotational delay) -5 ms
+2. Move the head to the right track (seek) - 5 ms
+3. actually transfer the data (transfer)
+
+Average rotational delay
+8.3 ms/rev
+
+Drive performance will depend a lot on how the drive is used
+
+Random workload:
+	read 32KB from each of 100 locations
+
+Sequential workload:
+	read 3.2MB sequentially
+
+File API
+	creating a file: open()
+	reading/writing: read(),write()
+	writing immediately: fsync()
+	renaming: rename()
+	getting status: stat(),fstat()
+	deleting: unlink() - deletes a name from the filesystem
+
+A physical disk can be subdivided into partitions
+
+Sometimes volume is used for a partition on which a file
+system has been created.
+
+A related idea is logical volume, which could be p art of a drive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

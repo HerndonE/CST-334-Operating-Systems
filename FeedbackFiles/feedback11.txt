@@ -1,0 +1,10 @@
+problem 1.6: 0/2
+  response: Y; correct: N
+  explanation: In the grammar semicolons are used to separate statements; you can't have a semicolon after the last statement.
+problem 2.test 2: 0/10
+  test failed: test script test2.sh; return code = -1
+problem 2.test 6: 0/10
+  test failed: test script test6.sh; return code = -1
+
+//It will pass the test cases given to students but not
+his personal tests.  ¯\_(ツ)_/¯

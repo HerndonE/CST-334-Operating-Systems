@@ -1,0 +1,5 @@
+● a program is one or more statements, and each statement must end with a ";"
+● a statement is either 1) a function call with exactly one argument, or 2) an assignment statement.  The argument to the function call is an expression.
+● an expression is either 1) a function call with exactly one argument, 2) a variable, or 3) a non-negative integer
+
+Hw 13 - pretty rough assignment

@@ -1,0 +1,42 @@
+designing file structure
+	files have:
+		inode #
+		metadata
+		content
+	
+	directories have:
+		inode #
+		(name, inode #) pairs
+
+You need to be able to find the root directory
+
+inode will capture file metadata and location of 
+the file's data blocks
+
+Need to track which data blocks and inodes are being used
+	Use bitmaps
+		each bit tracks 1 item
+		0 = free, 1 = used
+	With 1 block we can track 32K items
+	Use 1 block for inode bitmap, 1 for data bitmap
+
+Where is the actual content withing files stored?
+	In data blocks
+
+The inode number (i-number) tell us where the inode is located
+
+What is stored in the blocked inode number?
+	inode bitmap
+
+
+
+
+
+
+
+
+
+
+
+
+
