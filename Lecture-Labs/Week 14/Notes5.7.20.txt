@@ -1,0 +1,67 @@
+Two part exam
+ part 1: short questions 20-30mins 10-15?
+ part 2: longer questions 45 minutes
+
+Process Management Review
+	Main goal: virtualize the CPU
+	Make it so programs are not aware that CPU is being shared
+	
+How to avoid excess overheard
+	Let processes run directly on the CPU
+
+How to keep limit processes control over the hardware?
+	hardware user/kernal mode
+	hardware software interrupts
+
+
+When certain hardware events occur, the CPU:
+	Stops the current process, save its registers, enters
+		kernal mode
+
+	Locates an interrupt handler in the OS trap table; the OS
+		runs it
+
+Scheduling algorithms
+
+Scheduling ciritera
+
+Which scheduling process has the
+lowest average response time?
+	 -round robin
+
+Memory Management
+	main goal: virtualize memory
+	Each process gets its own virtual address space
+
+	Main technical problems:
+		how to do address translation quickly
+		....
+
+2 homeworks will be dropped
+
+Concurrency
+	Main goal:
+		mutually exclusive access to critical sections
+		avoid deadlocks
+		processes wait efficiently
+
+	Synchronization primitives
+		Locks, conditions variables, semaphores
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
