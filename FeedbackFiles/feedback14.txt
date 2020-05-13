@@ -1,0 +1,8 @@
+problem 1.4: 0/3
+  response: 22; correct: 23808
+  explanation: See the paragraph in OSTEP in section 40.3 that begins: To read inode number 32.  The paragraph shows the calculation when the inode number is 32.  When the inode number is 45, the calculation is 45 * 256 + 12 * 1024, which is 23808.
+problem 1.5: 0/3
+  response: F; correct: T
+  explanation: See section 40.7 of OSTEP.  The author explains that buffering writes has multiple benefits, including that disk writes can be scheduled for better performance.
+problem 2.test 9: 0/4
+  test failed: test script test9.sh; return code = -1
